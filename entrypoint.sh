@@ -24,6 +24,7 @@ usermod -g ${PGID} ${B_USER_NAME}
 
 # Explicitly grant ownership of /config volume to new user
 chown -R ${B_USER_NAME}:${B_GROUP_NAME} /config
+chown -R ${B_USER_NAME}:${B_GROUP_NAME} /opt
 
 # Output 
 echo "Running container as ${B_USER_NAME} in group ${B_GROUP_NAME} (${PUID}:${PGID})"
